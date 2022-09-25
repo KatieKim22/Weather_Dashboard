@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <section id="page">
+        <header>Weather Dashboard</header>
+
+        <nav>
+            <form class="searchBox">
+                <p class="searchP">Search for a City:</p>
+                <input type="text" placeholder="San Francisco" name="search" class="inputValue">
+                <button type="submit" id="search-btn">Search</button>
+            </form>
+        </nav>
+        <main>
+            <div class="weather_basic">
+                <h1 class="location"></h1>
+                <p class="date"></p>
+                <img src="dots.png" alt="weatherIcon" class="imgClass">
+                <p class="temp"></p>
+                <p class="wind"></p>
+                <p class="humidity"></p>
+                <p class="uvIndex"></p>
+            </div>
+            <div class="futureWeater">
+                <div class="fivedays_weather">
+                    <p class="fiveDate1"></p>
+                    <div class="icon"><img src="dots.png" alt="weatherIcon" class="imgClass"></div>
+                    <p class="fiveTemp1"></p>
+                    <p class="fiveWind1"></p>
+                    <p class="fiveHumidity1"></p>
+                </div>
+
+                <div class="fivedays_weather">
+                    <p class="fiveDate2"></p>
+                    <img src="dots.png" alt="weatherIcon" class="imgClass">
+                    <p class="fiveTemp2"></p>
+                    <p class="fiveWind2"></p>
+                    <p class="fiveHumidity2"></p>
+                </div>
+
+                <div class="fivedays_weather">
+                    <p class="fiveDate3"></p>
+                    <img src="dots.png" alt="weatherIcon" class="imgClass">
+                    <p class="fiveTemp3"></p>
+                    <p class="fiveWind3"></p>
+                    <p class="fiveHumidity3"></p>
+                </div>
+
+                <div class="fivedays_weather">
+                    <p class="fiveDate4"></p>
+                    <img src="dots.png" alt="weatherIcon" class="imgClass">
+                    <p class="fiveTemp4"></p>
+                    <p class="fiveWind4"></p>
+                    <p class="fiveHumidity4"></p>
+                </div>
+
+                <div class="fivedays_weather">
+                    <p class="fiveDate5"></p>
+                    <img src="dots.png" alt="weatherIcon" class="imgClass">
+                    <p class="fiveTemp5"></p>
+                    <p class="fiveWind5"></p>
+                    <p class="fiveHumidity5"></p>
+                </div>
+            </div>
+        </main>
+    </section>
+
+</body>
+
+</html>
