@@ -1,3 +1,7 @@
+// require('dotenv').config();
+
+// console.log(process.env);
+
 var cityNameInput = document.querySelector('.inputValue')
 
 var weatherToday = document.querySelector('.weather_basic')
@@ -8,9 +12,11 @@ var currentWind = document.querySelector('.wind')
 var currentHumidity = document.querySelector('.humidity')
 var currentUvIndex = document.querySelector('.uvIndex')
 var weatherIcon = document.querySelector(".imgClass")
-
-
 var clickedBtn = document.querySelector('#search-btn')
+const API_KEY = '8b0ee70544e38a07264d7619ab273e85'
+// const api_key = process.env.API_KEY;
+
+
 
 // to show weather of the city
 
@@ -18,7 +24,7 @@ clickedBtn.addEventListener('click', getApi)
 
 function getApi(locationUrl) {
 
-    var locationUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityNameInput.value + "&appid=8b0ee70544e38a07264d7619ab273e85"
+    var locationUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityNameInput.value + "&appid=" + API_KEY
 
     fetch(locationUrl)
         .then(response => response.json())
@@ -29,7 +35,7 @@ function getApi(locationUrl) {
             console.log(lat, lon)
             console.log(data)
 
-            return fetch("https://api.openweathermap.org/data/3.0/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly&appid=8b0ee70544e38a07264d7619ab273e85&units=imperial")
+            return fetch("https://api.openweathermap.org/data/3.0/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly&appid=" + API_KEY + "&units=imperial")
                 .then(response => response.json())
                 .then(data => {
 
@@ -41,7 +47,7 @@ function getApi(locationUrl) {
 
                     locationValue.innerHTML = cityNameInput.value
                     currentDate.innerHTML = today.toLocaleDateString();
-                   
+
                     currentTemp.innerHTML = "Temp: " + temp
                     currentWind.innerHTML = "Wind: " + wind
                     currentHumidity.innerHTML = "Humidity: " + humidity
