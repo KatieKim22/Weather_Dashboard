@@ -24,7 +24,7 @@ clickedBtn.addEventListener('click', getApi)
 
 function getApi(locationUrl) {
 
-    var locationUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityNameInput.value + "&appid=" + API_KEY
+    var locationUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityNameInput.value + "&appid=" + API_KEY
 
     fetch(locationUrl)
         .then(response => response.json())
