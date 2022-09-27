@@ -13,7 +13,7 @@ var currentHumidity = document.querySelector('.humidity')
 var currentUvIndex = document.querySelector('.uvIndex')
 var weatherIcon = document.querySelector(".imgClass")
 var clickedBtn = document.querySelector('#search-btn')
-// const API_KEY = '8b0ee70544e38a07264d7619ab273e85'
+const API_KEY = '8b0ee70544e38a07264d7619ab273e85'
 // const api_key = process.env.API_KEY;
 
 
